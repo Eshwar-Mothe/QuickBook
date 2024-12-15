@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+/* Variables */
+
+:root {
+
+    --primary-color: #00ccff;
+    --secondary-color: #5a5c46;
+    --large-border-radius: 1rem;
+    --short-border-radius: .5rem;
+    --large-border-width: 2px;
+    --short-border-width: 1px;
+    --primary-text-color: #3a3939;
+    --secondary-text-color: #87ceeb;
+    --large-padding-inline: 1rem;
+    --short-padding-inline: .5rem;
+    --large-padding-block: 1rem;
+    --short-padding-block: .5rem;
+    --links-text-size: 1rem;
+    --primary-font-weight: 700;
+    --secondary-font-weight: 900;
+}
+
+body {
+    background-color: #3f3f3f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* navbar stylings */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: var(--large-padding-inline);
+    padding-block: var(--short-padding-block);
+    border: var(--short-border-width) solid #292929;
+    border-style: none none solid none;
+    /* box-shadow: 0 0 5px var(--primary-color); */
+    background-color: #818181;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-size: var(--links-text-size);
+    font-weight: var(--primary-font-weight);
+    text-transform: uppercase;
+    transition: .3s;
+
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+nav ul li {
+    list-style: none;
+}
+
+
+/* Logo Styling */
+#title {
+    font-size: 2.5rem;
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #3a3939;
+}
+
+#title span {
+    color: var(--secondary-color);
+}
+
+#title {
+    background-color: var(--primary-color);
+    display: inline-block;
+    padding-inline: .5rem;
+    padding-block: .1rem;
+    border-radius: var(--large-border-radius);
+    padding-block-start: .5rem;
+}
+
+
+/* User Input Stylings */
+.first-Section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(15deg, var(--primary-text-color) 0%, #4141416e 100%),
+    url(background.jpeg) no-repeat center center / cover;
+    border: 2px solid #383838;
+    box-shadow: 0 1px 2rem rgba(0, 0, 0);
+    border-style: none none solid none;
+    justify-content: space-between;
+    padding-block: var(--large-padding-block);
+    gap: 2rem;
+}
+
+
+.allDetails{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.wrapper {
+    width: 100%;
+    background: #5757579a;
+    border-radius: 10px;
+    border:1px solid #808080;
+    box-shadow: 0 0 .5rem var(--primary-text-color);
+}
+
+.wrapper header {
+    display: flex;
+    align-items: center;
+    padding-inline: var(--large-padding-inline);
+    padding-block: var(--short-padding-block);
+    justify-content: space-between;
+}
+
+header .icons {
+    display: flex;
+}
+
+header .icons span {
+    height: 2.1rem;
+    width: 2.1rem;
+    margin: 0 1px;
+    cursor: pointer;
+    color: #878787;
+    text-align: center;
+    line-height: 2.1rem;
+    font-size: 1.9rem;
+    user-select: none;
+    border-radius: 50%;
+}
+
+
+header .icons span:hover {
+    background: #f2f2f2;
+}
+
+header .current-date {
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+
+.calendar {
+    padding: .1rem;
+}
+
+.calendar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+}
+
+
+.calendar li {
+    color: #333;
+    width: calc(100% / 7);
+    font-size: 1.07rem;
+}
+
+.calendar .weeks li {
+    font-weight: 500;
+    cursor: default;
+}
+
+.calendar .days li {
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.days li.inactive {
+    color: #aaa;
+}
+
+.days li.active {
+    color: #fff;
+}
+
+.days li::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+    background: var(--primary-color);
+}
+
+.days li:not(.active):hover::before {
+    background: #f2f2f2;
+}
+
+.date-picker {
+    margin-inline: var(--large-padding-inline);
+    padding-block: var(--large-padding-block);
+}
+
+.date-picker input{
+    color: var(--primary-color);
+}
+
+
+input,
+select {
+    padding-inline: var(--short-padding-inline);
+    padding-block: var(--short-padding-block);
+    border-radius: var(--short-border-radius);
+    border-style: none;
+    text-align: center;
+    font-weight: 500;
+    background-color: var(--primary-text-color);
+    width: 50%;
+}
+
+/* Station stylings */
+
+.travelDetails {
+    width: 50%;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+    padding-inline: 1rem;
+    background-color: #5757578f;
+    border: 1px solid gray;
+    box-shadow: 0 0px .5rem var(--primary-text-color);
+    border-radius: var(--large-border-radius);
+
+}
+
+.stationDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: var(--large-padding-block);
+    width: 100%;
+    
+}
+
+.stationDetails .topSection,
+.stationDetails .bottomSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    width: 100%;
+    padding-block: 1.5rem;
+    padding-inline: .5rem;
+}
+
+#swapperSymbol {
+    font-size: 5rem;
+    cursor: pointer;
+    padding-inline: var(--large-padding-inline);
+    /* padding-block: var(--large-padding-block); */
+    &:hover{
+        color: var(--primary-text-color);
+    }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input{
+    width: 100%;
+}
+label{
+    color: white;
+}
+
+option{
+    padding-inline: var(--large-padding-inline);
+}
+
+p{
+    text-align: center;
+    color: #aaa;
+}
+
+.submitSection{
+    width: 20%;
+    /* background-color: #00ccff; */
+}
+
+.submitSection button{
+    width: 100%;
+    background-color: var(--primary-text-color);
+    border-style: none;
+    border:1px solid var(--primary-color);
+    border-radius: var(--short-border-radius);
+    padding-block: var(--short-padding-block);
+    padding-inline: var(--large-padding-inline);
+
+    &:hover{
+        background-color: var(--primary-color);
+        border-color: var(--primary-text-color);
+        color: white;
+    }
+}

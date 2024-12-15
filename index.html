@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Book-Travel as you like</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav>
+        <section class="logo">
+            <h1 id="title">Quick <span>Book</span></h1>
+        </section>
+        <section class="navLinks">
+            <ul class="navs">
+                <li><a href="#home">home</a></li>
+                <li><a href="#status">status</a></li>
+                <li><a href="#pnr">pnr</a></li>
+                <li><a href="#book">book</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#signup">SignUp</a></li>
+            </ul>
+        </section>
+    </nav>
+
+<!-- Main Section -->
+    <main>
+        <section class="first-Section">
+            <section class="allDetails">
+                <!-- Travel Details -->
+                <section class="travelDetails">
+
+                    <section class="stationDetails">
+                        <!-- Source Details -->
+
+                        <section class="topSection">
+                            <section class="sourceDetails">
+                                <form class="source">
+                                    <label>From</label>
+                                    <input type="text" placeholder="Enter Station" id="src">
+                                </form>
+                                <p id="srcName">Source Full Name</p>
+                            </section>
+
+                            <section id="swapperSymbol">&#8651;</section>
+
+                            <!-- Destination Details -->
+                            <section class="destinyDetails">
+                                <form class="destination" id="dest">
+                                    <label>To</label>
+                                    <input type="text" placeholder="Enter Station" id="dest">
+                                </form>
+                                <p id="srcName">Destination Full Name</p>
+                            </section>
+                        </section>
+
+                        <!-- Class And Quota Details -->
+                        <section class="bottomSection">
+                            <section class="classSection">
+                                <section class="classDetails">
+                                    <form class="class">
+                                        <label>Class</label>
+                                        <!-- <br> -->
+                                        <p id="clsName" class="inactive">(ALL/2S/SLEEPER/2A/3A/1A/CC)</p>
+                                        <select name="class" id="class">
+                                            <option value="all" selected>All Classes</option>
+                                            <option value="2s">Second Sitting</option>
+                                            <option value="sl">Sleeper</option>
+                                            <option value="1a">AC First Class</option>
+                                            <option value="2a">AC 2 Tier</option>
+                                            <option value="3a">AC 3 Tier</option>
+                                            <option value="cc">AC Car Chair</option>
+                                        </select>
+                                    </form>
+                                </section>
+                            </section>
+                            <section class="quotaSection">
+                                <section class="quotaDetails">
+                                    <form class="quota">
+                                        <label>Quota</label>
+                                        <!-- <br> -->
+                                        <p>choose your quota</p>
+                                        <select name="quota" id="quota">
+                                            <option value="gen">General</option>
+                                            <option value="ladies">Ladies</option>
+                                            <option value="pwd">Person with Disability</option>
+                                            <option value="tatkal">Tatkal</option>
+                                            <option value="premiumT">Premium Tatkal</option>
+                                        </select>
+                                    </form>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+
+                </section>
+
+                <!-- Date Section -->
+                <section class="dateSection">
+                    <div class="wrapper">
+                        <header>
+                            <p class="current-date"></p>
+                            <div class="icons">
+                                <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                                <span id="next" class="material-symbols-rounded">chevron_right</span>
+                            </div>
+                        </header>
+                        <!-- Calander -->
+                        <div class="calendar">
+                            <ul class="weeks">
+                                <li>Sun</li>
+                                <li>Mon</li>
+                                <li>Tue</li>
+                                <li>Wed</li>
+                                <li>Thu</li>
+                                <li>Fri</li>
+                                <li>Sat</li>
+                            </ul>
+                            <ul class="days"></ul>
+                        </div>
+
+                        <!-- Date Picker Input -->
+                        <div class="date-picker">
+                            <label for="selected-date">Selected Date:</label>
+                            <input type="text" id="selected-date" placeholder="selected-date" readonly />
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+            <!-- Trains Search Button -->
+            <section class="submitSection">
+                <button>Search Trains</button>
+            </section>
+        </section>
+    </main>
+
+    <!-- Scripts Section -->
+    <script src="script.js"></script>
+    <script src="datePicker.js" defer></script>
+</body>
+
+</html>
