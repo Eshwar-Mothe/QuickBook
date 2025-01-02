@@ -1,0 +1,291 @@
+@import './style.css';
+
+.ribbon {
+    background-color: rgb(95, 95, 95);
+}
+
+#ribbonForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    padding-block: var(--large-padding-block);
+}
+
+
+.swapper {
+    display: inline-block;
+    width: 2%;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+#ribbonForm input,
+#ribbonForm select {
+    padding-inline: var(--large-padding-inline);
+    padding-block: var(--large-padding-block);
+    width: 15%;
+    outline: 1px solid #ffffff00;
+    border: none;
+    color: var(--primary-color);
+    background-color: var(--primary-text-color);
+    border-radius: 10px;
+}
+
+#ribbonForm select {
+    padding-inline: 0;
+}
+
+#ribbonForm input{
+    text-align: center !important;
+}
+
+#ribbonForm input:focus {
+    outline-color: var(--primary-color);
+    box-shadow: 0 0 .3rem var(--primary-color);
+}
+
+#ribbonForm input[type='submit'], #ribbonForm input[type='button']{
+    cursor: pointer;
+    border-color: var(--primary-color);
+}
+
+#ribbonForm #newSearch{
+    display: none;
+}
+
+#ribbonForm #swapper{
+    transition: transform 0.5s;
+}
+
+#ribbonForm #swapper .swapped{
+    transform: rotate(360deg);
+}
+
+.infoLine {
+    padding-block: var(--short-padding-block);
+}
+
+.showAvlTrains {
+    padding-inline: var(--large-padding-inline);
+}
+
+.showAvlTrains .train {
+    margin-block: var(--large-padding-block);
+}
+
+#days {
+    display: inline-block;
+}
+
+.train1 {
+    padding-block-end: var(--large-padding-inline);
+    border: 1px solid #a5a5a5;
+    border-radius: 10px;
+}
+
+.train1 header,
+.train1 .trainInfo {
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: var(--short-padding-inline);
+    padding-block: var(--short-padding-block);
+    font-size: 1rem;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.train1 header {
+    background-color: #252525;
+}
+
+.train1 header .schedule {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.avlDays {
+    list-style: none;
+    display: flex;
+    gap: .5rem;
+    color: white;
+}
+
+.avlDays li.inactive {
+    color: #636363;
+}
+
+
+.trainInfo {
+    display: flex;
+}
+
+.bookingSection {
+    margin-block-start: var(--short-padding-block);
+    display: flex;
+    gap: 2rem;
+    padding-inline: var(--large-padding-inline);
+
+}
+
+.trainClass1 {
+    border: 1px solid var(--primary-color);
+    width: 20%;
+    border-radius: 10px;
+    cursor: pointer;
+    padding-block: var(--short-padding-block);
+
+    &:hover {
+        background-color: rgb(57, 65, 71);
+    }
+}
+
+.trainClass1 p {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    padding-inline: var(--short-padding-inline);
+}
+
+.trainClass1 p#avail {
+    font-weight: 100;
+    color: var(--primary-color);
+}
+
+.book {
+    width: 30% !important;
+    margin: var(--large-padding-block);
+    margin-block-end: 0;
+}
+
+.book button {
+    padding-block: var(--large-padding-block);
+    font-weight: 500;
+}
+
+/* Train Schedule Styles */
+
+.trainSchedule {
+    /* border: 1px solid red; */
+    border-radius: var(--short-border-radius);
+    padding-block: var(--large-padding-block);
+    padding-inline: var(--large-padding-inline);
+    padding-block-start: 0;
+    overflow: auto;
+    height: 100vh;
+    color: #a1a1a1;
+    cursor: default;
+}
+
+.trainSchedule header {
+    padding-inline: var(--large-padding-inline);
+    padding-block: var(--short-padding-block);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-text-color);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    font-weight: 700;
+}
+
+.trainSchedule header p {
+    color: var(--primary-color);
+    cursor: default;
+}
+
+.trainSchedule header #toggle{
+    cursor: pointer;
+}
+
+.trainSchedule table {
+    border: 2px solid var(--primary-text-color);
+    border-style: none none solid none;
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    margin-block-start: var(--large-padding-block);
+}
+
+.trainSchedule table tr {
+    padding-block: var(--short-padding-block);
+    border: 1px solid var(--primary-text-color);
+    border-style: none none solid none;
+}
+
+.trainSchedule table th,
+.trainSchedule table td {
+    /* width: 20%; */
+    padding-inline: var(--short-padding-inline);
+    padding-block: var(--short-padding-block);
+}
+
+.trainSchedule table td {
+    text-transform: uppercase;
+}
+
+.trainSchedule table th {
+    background-color: var(--primary-text-color);
+    color: var(--primary-color);
+}
+
+.trainSchedule table .rDays ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    padding-inline-end: var(--short-padding-inline);
+}
+
+.trainSchedule table .rDays ul li.true {
+    color: #ccc;
+}
+
+.trainSchedule table .rDays ul li.false {
+    color: #636363;
+}
+
+/* detailed informatio of scheduled trains */
+
+.detailedInfo {
+    border: none;
+}
+
+
+/* Train Status  */
+
+.trainSchedule{
+    background-color: inherit;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #353535;
+    box-shadow: 0 0px 2rem #747474;
+    margin-block: 1rem;
+    display: none;
+
+    &::-webkit-scrollbar{
+        display:block !important;
+        width: .3rem !important;
+        height: .3rem !important;
+    }
+
+    &::-webkit-scrollbar-track{
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: var(--primary-color); 
+        border-radius: 10px;
+    }
+}

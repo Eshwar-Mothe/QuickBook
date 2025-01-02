@@ -1,0 +1,41 @@
+@import './style.css';
+/* Card Section Styles */
+
+.card-container{
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    padding-block: var(--large-padding-block);
+    margin-block: var(--large-padding-block);
+}
+
+
+.card-container .book, .card-container .status, .card-container .pnr{
+    border-radius: var(--large-border-radius);
+    box-shadow: 0 0 .2rem var(--primary-color);
+    width: 30%;
+    min-height: 30vh;
+    text-align: center;
+    padding-block: var(--large-padding-block);
+    transition: transform 0.5s;
+
+    &:hover{
+        transform: translateY(-5px);
+    }
+}
+
+.card-container .book h1, .card-container .status h1, .card-container .pnr h1{
+    font-size: 2rem;
+    color: var(--primary-color);
+    padding-block: var(--large-padding-block);
+}
+
+button{
+    width: 30%;
+    margin-block: var(--large-padding-block);
+}
+/* Card Styles */
+
+h1{
+    color: white;
+}

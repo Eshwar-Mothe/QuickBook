@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quick Book-Travel as you like</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cardStylings.css">
+    <link rel="stylesheet" href="mediaQuiries.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 </head>
@@ -18,17 +20,38 @@
         </section>
         <section class="navLinks">
             <ul class="navs">
+                <li><a href="index.html">home</a></li>
+                <li class="status1"><a href="#status">status</a></li>
+                <li class="pnr1"><a href="#pnr">pnr</a></li>
+                <li class="booking"><a href="#book">book</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- If required User Modules -->
+                <!-- <li class=""><a href="#login">Login</a></li>
+                <li class=""><a href="#signup">SignUp</a></li> -->
+            </ul>
+        </section>
+
+        <section class="hamburger" id="expand">
+            <span></span>
+            <span></span>
+            <span></span>
+        </section>
+
+        <section id="close">&#10006;</section>
+
+        <section class="mblLinks" id="show">
+            <ul class="navs">
                 <li><a href="#home">home</a></li>
                 <li><a href="#status">status</a></li>
                 <li><a href="#pnr">pnr</a></li>
                 <li><a href="#book">book</a></li>
                 <li><a href="#login">Login</a></li>
-                <li><a href="#signup">SignUp</a></li>
+                <li><a href="#signup">Sign Up</a></li>
             </ul>
         </section>
     </nav>
 
-<!-- Main Section -->
+    <!-- Main Section -->
     <main>
         <section class="first-Section">
             <section class="allDetails">
@@ -42,20 +65,22 @@
                             <section class="sourceDetails">
                                 <form class="source">
                                     <label>From</label>
-                                    <input type="text" placeholder="Enter Station" id="src">
+                                    <input type="text" placeholder="Enter Station" id="src" pattern="a-zZ-A" required>
                                 </form>
-                                <p id="srcName">Source Full Name</p>
+                                <p id="srcName">Source Name</p>
                             </section>
 
+
+                            <!-- Swapper Symbol -->
                             <section id="swapperSymbol">&#8651;</section>
 
                             <!-- Destination Details -->
                             <section class="destinyDetails">
-                                <form class="destination" id="dest">
+                                <form class="destination" id="destForm">
                                     <label>To</label>
-                                    <input type="text" placeholder="Enter Station" id="dest">
+                                    <input type="text" placeholder="Enter Station" id="dest" required>
                                 </form>
-                                <p id="srcName">Destination Full Name</p>
+                                <p id="srcName">Destination Name</p>
                             </section>
                         </section>
 
@@ -67,7 +92,7 @@
                                         <label>Class</label>
                                         <!-- <br> -->
                                         <p id="clsName" class="inactive">(ALL/2S/SLEEPER/2A/3A/1A/CC)</p>
-                                        <select name="class" id="class">
+                                        <select name="class" id="class" required>
                                             <option value="all" selected>All Classes</option>
                                             <option value="2s">Second Sitting</option>
                                             <option value="sl">Sleeper</option>
@@ -85,7 +110,7 @@
                                         <label>Quota</label>
                                         <!-- <br> -->
                                         <p>choose your quota</p>
-                                        <select name="quota" id="quota">
+                                        <select name="quota" id="quota" required>
                                             <option value="gen">General</option>
                                             <option value="ladies">Ladies</option>
                                             <option value="pwd">Person with Disability</option>
@@ -95,7 +120,11 @@
                                     </form>
                                 </section>
                             </section>
+
                         </section>
+                    </section>
+                    <section class="mblDate">
+                        <input type="date" id="doj" placeholder="date of Journey"> <!-- for mobile -->
                     </section>
 
                 </section>
@@ -127,23 +156,64 @@
                         <!-- Date Picker Input -->
                         <div class="date-picker">
                             <label for="selected-date">Selected Date:</label>
-                            <input type="text" id="selected-date" placeholder="selected-date" readonly />
+                            <input type="text" id="selected-date" placeholder="selected-date"><!-- for desktop -->
                         </div>
                     </div>
+
                 </section>
+
 
             </section>
 
             <!-- Trains Search Button -->
             <section class="submitSection">
-                <button>Search Trains</button>
+                <button id="searchTrain">Search Trains</button>
+            </section>
+        </section>
+
+
+        <!-- Card Section -->
+
+        <h1 style="text-align: center; padding-block-start: 1rem;">Useful Links....!</h1>
+        <section class="card-container">
+
+            <!-- Book Your Train -->
+            <section class="book">
+                <section class="content">
+                    <h1>Planning Travel</h1>
+                    <p>Book and travel hassesl free</p>
+                </section>
+                <section class="button"><button class="booking">Book..!</button></section>
+            </section>
+
+            <!-- Train Status Section -->
+            <section class="status">
+                <section class="content">
+                    <h1>Train Status</h1>
+                    <p>Where's Your Train</p>
+                </section>
+                <section class="button"><button class="status1">Train Status</button></section>
+            </section>
+
+            <!-- PNR Section -->
+            <section class="pnr">
+                <section class="content">
+                    <h1>Check PNR</h1>
+                    <p>Already Booked...! Check PNR</p>
+                </section>
+                <section class="button"><button class="pnr1">Check PNR..!</button></section>
             </section>
         </section>
     </main>
 
+    <footer>
+        
+    </footer>
+
     <!-- Scripts Section -->
     <script src="script.js"></script>
     <script src="datePicker.js" defer></script>
+    <script src="animations.js" defer></script>
 </body>
 
 </html>

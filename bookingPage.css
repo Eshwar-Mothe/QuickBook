@@ -1,0 +1,47 @@
+@import './style.css';
+
+.steps{
+    width: 100%;
+    padding-block: var(--large-padding-block);
+}
+
+.steps ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.steps ul li{
+    background-color: var(--primary-text-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+}
+
+.line{
+    margin: auto;
+    background-color: var(--primary-color);
+    width: 50%;
+    height: 1px;
+    margin-block-start: -1.5rem;
+}
+
+.steps ul li.active{
+    background-color: var(--primary-color);
+}
+.trainDetails {
+    border: 1px solid red;
+    margin-block-start: var(--large-padding-block);
+    padding-block: var(--large-padding-block);
+}
+
+.trainDetails header{
+    padding-block: var(--short-padding-block);
+    background-color: var(--primary-text-color);
+    padding-inline: var(--large-padding-inline);
+    display: flex;
+    justify-content: space-between;
+}

@@ -59,9 +59,12 @@ document.querySelectorAll(".days li").forEach(day => {
     if (!e.target.classList.contains("inactive")) {
       const selectedDay = parseInt(e.target.dataset.day);
       selectedDate = new Date(currYear, currMonth, selectedDay);
-      selectedDateInput.value = `${selectedDate.getFullYear()}-${String(
-        selectedDate.getMonth() + 1
-      ).padStart(2, '0')}-${String(selectedDate.getDate()).padStart(2, '0')}`;
+      // selectedDateInput.value = `${selectedDate.getFullYear()}-${String(
+      //   selectedDate.getMonth() + 1
+      // ).padStart(2, '0')}-${String(selectedDate.getDate()).padStart(2, '0')}`;
+
+      selectedDateInput.value = `${String(selectedDate.getDate()).padStart(2, '0')}-${String(
+  selectedDate.getMonth() + 1).padStart(2, '0')}-${selectedDate.getFullYear()}`;
       
       console.log("Date picked by user:", selectedDate); // Log the picked date
       

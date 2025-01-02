@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import './mediaQuiries.css';
+
+
 /* Variables */
+
+/* Dont try change this color */
+/* --primary-color: #00ccff; */
+
 
 :root {
 
@@ -25,7 +32,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
@@ -46,7 +53,6 @@ nav {
     padding-block: var(--short-padding-block);
     border: var(--short-border-width) solid #292929;
     border-style: none none solid none;
-    /* box-shadow: 0 0 5px var(--primary-color); */
     background-color: #818181;
 }
 
@@ -74,9 +80,22 @@ nav ul li {
 }
 
 
+.hamburger span {
+    display: flex;
+    width: 1.5rem;
+    margin-block: 5px;
+    border: 2px solid var(--primary-color);
+}
+
+#close{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+
 /* Logo Styling */
 #title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: "Teko", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -99,12 +118,12 @@ nav ul li {
 
 
 /* User Input Stylings */
-.first-Section{
+.first-Section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(15deg, var(--primary-text-color) 0%, #4141416e 100%),
-    url(background.jpeg) no-repeat center center / cover;
+    background: linear-gradient(5deg, var(--primary-text-color) 5%, #41414100 100%),
+        url(background.jpeg) no-repeat center center / cover;
     border: 2px solid #383838;
     box-shadow: 0 1px 2rem rgba(0, 0, 0);
     border-style: none none solid none;
@@ -114,19 +133,21 @@ nav ul li {
 }
 
 
-.allDetails{
+.allDetails {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    /* background: #575757e1; */
 }
 
 .wrapper {
     width: 100%;
-    background: #5757579a;
+    background: #575757e1;
     border-radius: 10px;
-    border:1px solid #808080;
+    border: 1px solid #808080;
     box-shadow: 0 0 .5rem var(--primary-text-color);
+    padding-inline: var(--large-padding-inline);
 }
 
 .wrapper header {
@@ -177,7 +198,7 @@ header .current-date {
 
 
 .calendar li {
-    color: #333;
+    color: #dddddd;
     width: calc(100% / 7);
     font-size: 1.07rem;
 }
@@ -195,7 +216,7 @@ header .current-date {
 }
 
 .days li.inactive {
-    color: #aaa;
+    color: #353535;
 }
 
 .days li.active {
@@ -219,7 +240,7 @@ header .current-date {
 }
 
 .days li:not(.active):hover::before {
-    background: #f2f2f2;
+    background: #969696;
 }
 
 .date-picker {
@@ -227,12 +248,17 @@ header .current-date {
     padding-block: var(--large-padding-block);
 }
 
-.date-picker input{
+.date-picker input {
     color: var(--primary-color);
 }
 
 
-input,
+.source input,
+.destination input,
+.class input,
+.quota input,
+.date-picker input,
+.mblDate input,
 select {
     padding-inline: var(--short-padding-inline);
     padding-block: var(--short-padding-block);
@@ -241,7 +267,7 @@ select {
     text-align: center;
     font-weight: 500;
     background-color: var(--primary-text-color);
-    width: 50%;
+    width: 90%;
 }
 
 /* Station stylings */
@@ -251,9 +277,9 @@ select {
     justify-content: space-around;
     display: flex;
     align-items: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding-inline: 1rem;
-    background-color: #5757578f;
+    background-color: #575757b2;
     border: 1px solid gray;
     box-shadow: 0 0px .5rem var(--primary-text-color);
     border-radius: var(--large-border-radius);
@@ -266,7 +292,7 @@ select {
     align-items: center;
     padding-block: var(--large-padding-block);
     width: 100%;
-    
+
 }
 
 .stationDetails .topSection,
@@ -280,55 +306,82 @@ select {
     padding-inline: .5rem;
 }
 
+/* swapper Styles */
+
 #swapperSymbol {
     font-size: 5rem;
     cursor: pointer;
-    padding-inline: var(--large-padding-inline);
-    /* padding-block: var(--large-padding-block); */
-    &:hover{
-        color: var(--primary-text-color);
-    }
+    /* padding-inline: var(--large-padding-inline); */
+    transition: transform 0.5s;
+    user-select: none;
+    border-radius: 50%;
 }
 
-form{
+.swapped{
+    color: var(--primary-text-color);
+    transform: rotate(360deg);
+}
+
+.source,
+.destination,
+.class,
+.quota {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-form input{
-    width: 100%;
-}
-label{
+
+
+label {
     color: white;
 }
 
-option{
+option {
     padding-inline: var(--large-padding-inline);
 }
 
-p{
+p {
     text-align: center;
     color: #aaa;
 }
 
-.submitSection{
+.submitSection {
     width: 20%;
     /* background-color: #00ccff; */
 }
 
-.submitSection button{
+.submitSection button,
+button {
     width: 100%;
     background-color: var(--primary-text-color);
     border-style: none;
-    border:1px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
     border-radius: var(--short-border-radius);
     padding-block: var(--short-padding-block);
     padding-inline: var(--large-padding-inline);
 
-    &:hover{
+    &:hover {
         background-color: var(--primary-color);
         border-color: var(--primary-text-color);
         color: white;
+        cursor: pointer;
     }
+}
+
+button {
+    width: 30%;
+}
+
+input{
+    color: var(--primary-color);
+}
+.mblDate{
+    display: none;
+}
+
+.mblDate input{
+    margin-block-end: .5rem;
+    padding-inline: 2rem;
+    width: auto !important;
 }
