@@ -1,0 +1,67 @@
+{
+    "status": true,
+    "message": "Success",
+    "timestamp": 1735386218906,
+    "data": [
+        {
+            "ticket_fare": 2645,
+            "catering_charge": 0,
+            "alt_cnf_seat": false,
+            "total_fare": 2645,
+            "date": "7-2-2025",
+            "confirm_probability_percent": "",
+            "confirm_probability": "",
+            "current_status": "RAC   4/RAC   2"
+        },
+        {
+            "ticket_fare": 2645,
+            "catering_charge": 0,
+            "alt_cnf_seat": false,
+            "total_fare": 2645,
+            "date": "8-2-2025",
+            "confirm_probability_percent": "96",
+            "confirm_probability": "High",
+            "current_status": "GNWL4/WL2"
+        },
+        {
+            "ticket_fare": 2645,
+            "catering_charge": 0,
+            "alt_cnf_seat": false,
+            "total_fare": 2645,
+            "date": "9-2-2025",
+            "confirm_probability_percent": "94",
+            "confirm_probability": "High",
+            "current_status": "GNWL9/WL5"
+        },
+        {
+            "ticket_fare": 2645,
+            "catering_charge": 0,
+            "alt_cnf_seat": false,
+            "total_fare": 2645,
+            "date": "10-2-2025",
+            "confirm_probability_percent": "",
+            "confirm_probability": "",
+            "current_status": "AVAILABLE-0001"
+        },
+        {
+            "ticket_fare": 2645,
+            "catering_charge": 0,
+            "alt_cnf_seat": false,
+            "total_fare": 2645,
+            "date": "11-2-2025",
+            "confirm_probability_percent": "",
+            "confirm_probability": "",
+            "current_status": "GNWL/AVAILABLE"
+        },
+        {
+            "ticket_fare": 2645,
+            "catering_charge": 0,
+            "alt_cnf_seat": false,
+            "total_fare": 2645,
+            "date": "12-2-2025",
+            "confirm_probability_percent": "",
+            "confirm_probability": "",
+            "current_status": "AVAILABLE-0007"
+        }
+    ]
+}

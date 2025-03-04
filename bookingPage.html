@@ -1,67 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Irctct-Booking</title>
     <link rel="stylesheet" href="bookingPage.css">
 </head>
-<body>
-        <!-- NavBar -->
-        <nav>
-            <section class="logo">
-                <h1 id="title">Quick <span>Book</span></h1>
-            </section>
-            <section class="navLinks">
-                <ul class="navs">
-                    <li><a href="index.html">home</a></li>
-                    <li class="status1"><a href="#status">status</a></li>
-                    <li class="pnr1"><a href="#pnr">pnr</a></li>
-                    <li class="booking"><a href="#book">book</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <!-- If required User Modules -->
-                    <!-- <li class=""><a href="#login">Login</a></li>
-                    <li class=""><a href="#signup">SignUp</a></li> -->
-                </ul>
-            </section>
-    
-            <section class="hamburger" id="expand">
-                <span></span>
-                <span></span>
-                <span></span>
-            </section>
-    
-            <section id="close">&#10006;</section>
-    
-            <section class="mblLinks" id="show">
-                <ul class="navs">
-                    <li><a href="#home">home</a></li>
-                    <li><a href="#status">status</a></li>
-                    <li><a href="#pnr">pnr</a></li>
-                    <li><a href="#book">book</a></li>
-                    <li><a href="#login">Login</a></li>
-                    <li><a href="#signup">Sign Up</a></li>
-                </ul>
-            </section>
-        </nav>
 
+<body>
+    <!-- NavBar -->
+    <nav>
+        <section class="logo">
+            <h1 id="title">Quick <span>Book</span></h1>
+        </section>
+        <section class="navLinks">
+            <ul class="navs">
+                <li><a href="index.html">home</a></li>
+                <li class="status1"><a href="#status">status</a></li>
+                <li class="pnr1"><a href="#pnr">pnr</a></li>
+                <li class="booking"><a href="#book">book</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- If required User Modules -->
+                <!-- <li class=""><a href="#login">Login</a></li>
+                    <li class=""><a href="#signup">SignUp</a></li> -->
+            </ul>
+        </section>
+
+        <section class="hamburger" id="expand">
+            <span></span>
+            <span></span>
+            <span></span>
+        </section>
+
+        <section id="close">&#10006;</section>
+
+        <section class="mblLinks" id="show">
+            <ul class="navs">
+                <li><a href="#home">home</a></li>
+                <li><a href="#status">status</a></li>
+                <li><a href="#pnr">pnr</a></li>
+                <li><a href="#book">book</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#signup">Sign Up</a></li>
+            </ul>
+        </section>
+    </nav>
+
+    <header>
+        <section class="steps">
+            <ul>
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+            <section class="line"></section>
+        </section>
+    </header>
+
+    <section class="trainDetails">
         <header>
-            <section class="steps">
-                <ul>
-                    <li class="active">1</li>
-                    <li>2</li>
-                    <li>3</li>
-                </ul>
-                <section class="line"></section>
-            </section>
+            <p id="trainName">Telangana Express(12793)</p>
+            <p id="loc">loc</p>
         </header>
 
-        <section class="trainDetails">
-            <header>
-                <p id="trainName">Telangana Express(12793)</p>
-                <p id="loc">loc</p>
-            </header>
+        <section class="stationDetails">
+            <section class="dummy">
+                <section class="from">
+                    <section id="fromStation">06:00|<span id="station">Secunderabad JN</span></section>
+                    <section id="fromDate">Fri, 17 Jan</section>
+                </section>
+                <section class="timeSpan">
+                    --- <span id="duration">25: 17</span> ---
+                </section>
+                <section class="to">
+                    <section id="toStation">07:40|<span id="station">Secunderabad JN</span></section>
+                    <section id="toDate">Sat, 18 Jan</section>
+                </section>
+            </section>
         </section>
-        <script src="script.js"></script>
+
+        <section class="quotaCls">
+            <span id="class">AC First Class | <span id="quota">General</span></span>
+            
+        </section>
+    </section>
+    <script src="script.js"></script>
 </body>
+
 </html>

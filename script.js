@@ -1,8 +1,27 @@
 // Base URL for navigation
-const baseUrl = 'http://127.0.0.1:5503/';
+const baseUrl = 'http://127.0.0.1:5500/';
 
 // Button Navigations
 const availTrains = document.getElementById('searchTrain');
+
+const bookingNav = document.querySelectorAll('.booking1');
+const statusNav = document.querySelectorAll('.status1');
+const pnrNav = document.querySelectorAll('.pnr1');
+
+// Navigation to check the Status of the trains
+statusNav.forEach((statusButton) => {
+    statusButton.addEventListener('click', () => {
+        location.href = `${baseUrl}trainsAvl.html`;
+    })
+})
+
+// Navingation to Check the PNR Status
+pnrNav.forEach((pnrButton) => {
+    pnrButton.addEventListener('click', () => {
+        location.href = `${baseUrl}pnrCheck.html`;
+    })
+})
+
 
 
 
@@ -37,7 +56,7 @@ const getDateValue = () => {
     const mobileDate = document.getElementById('doj');
     const desktopDate = document.getElementById('selected-date');
     if (mobileDate.style.display !== 'none' || mobileDate.style.display !== '') {
-        console.log('true',mobileDate.value)
+        console.log('true', mobileDate.value)
         // return mobileDate.value; // Mobile date picker value
     }
     else if (desktopDate.style.display !== 'none' || desktopDate.style.display !== '') {
@@ -45,7 +64,7 @@ const getDateValue = () => {
         // return desktopDate.value;
 
     }
-    return ''; 
+    return '';
 };
 
 
@@ -55,20 +74,20 @@ const valueChecker = () => {
     let userClass = document.getElementById('class').value;
     let userQuota = document.getElementById('quota').value;
     let dojSamp = document.getElementById('selected-date').value; //Desktop view
-    let mbl= document.getElementById('doj').value; //mobile View
+    let mbl = document.getElementById('doj').value; //mobile View
     // console.log(mbl);
 
     let doj = ''
-    if(dojSamp != ''){
+    if (dojSamp != '') {
         doj = document.getElementById('selected-date').value;
     }
-    else if(mbl != ''){
+    else if (mbl != '') {
         doj = document.getElementById('doj').value;
     }
-    else{
+    else {
         console.log("Please select")
     }
-    console.log('Date',doj)
+    console.log('Date', doj)
 
     console.log("Details", Source, Dest, userClass, userQuota, doj);
 
@@ -93,8 +112,6 @@ const valueChecker = () => {
     }
 }
 
-// const sub = document.getElementById('searchTrain')
-
 availTrains.addEventListener('click', valueChecker);
 
 availTrains.addEventListener('click', () => {
@@ -110,7 +127,20 @@ availTrains.addEventListener('click', () => {
     }
 });
 
-function assigningValues() {
+// Redirecting to booking page after checking the value in the LocalStorage
 
-}
+const checkLocal1 = localStorage.getItem('user');
+const checkLocal2 = localStorage.getItem('newDetails');
 
+
+// Navigation to book the ticket
+bookingNav.forEach((bookinButton) => {
+    bookinButton.addEventListener('click', () => {
+        if (checkLocal1 || checkLocal2) {
+            location.href = `${baseUrl}bookingPage.html`;
+        }
+        else {
+            alert('Please search the train Details first')
+        }
+    });
+});

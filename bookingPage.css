@@ -1,18 +1,18 @@
 @import './style.css';
 
-.steps{
+.steps {
     width: 100%;
     padding-block: var(--large-padding-block);
 }
 
-.steps ul{
+.steps ul {
     display: flex;
     list-style: none;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.steps ul li{
+.steps ul li {
     background-color: var(--primary-text-color);
     width: 50px;
     height: 50px;
@@ -21,7 +21,7 @@
     line-height: 50px;
 }
 
-.line{
+.line {
     margin: auto;
     background-color: var(--primary-color);
     width: 50%;
@@ -29,19 +29,54 @@
     margin-block-start: -1.5rem;
 }
 
-.steps ul li.active{
+.steps ul li.active {
     background-color: var(--primary-color);
 }
+
 .trainDetails {
     border: 1px solid red;
     margin-block-start: var(--large-padding-block);
     padding-block: var(--large-padding-block);
 }
 
-.trainDetails header{
+.trainDetails header {
     padding-block: var(--short-padding-block);
     background-color: var(--primary-text-color);
     padding-inline: var(--large-padding-inline);
     display: flex;
     justify-content: space-between;
+}
+
+
+.stationDetails .dummy{
+    display: flex;
+    gap: 50vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.stationDetails .from,
+.stationDetails .to {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.stationDetails .from #fromDate,
+.stationDetails .to #toDate {
+    color: #808080 !important;
+} 
+
+.trainDetails .quotaCls{
+    text-align: center;
+    /* display: inline-block; */
+}
+
+.trainDetails .quotaCls span{
+    background-color: var(--primary-color);
+    padding-inline: var(--short-padding-inline);
+    padding-block: var(--short-padding-block);
+    font-weight: 500;
 }
